@@ -48,7 +48,7 @@
             })}
         </script>
         <!-- Styles -->
-        <link rel="stylesheet" href="/lerioc/dist/test/index.DfTyEPOR.css" />
+        <link rel="stylesheet" href="/lerioc/dist/index.BvZ5zEaJ.css" />
     </head>
     <body data-astro-cid-j7pv25f6>
         <header data-astro-cid-j7pv25f6>
@@ -56,7 +56,7 @@
                 <nav data-astro-cid-j7pv25f6>
                     <div class="logo" data-astro-cid-j7pv25f6>
                         <img
-                            src="/lerioc/dist/test/Lerioc%20logo%20transp%20cr.DdyYfojS_Zoi9GQ.webp"
+                            src="/lerioc/dist/Lerioc%20logo%20transp%20cr.DdyYfojS_Zoi9GQ.webp"
                             alt="Lerioc Tmi Logo"
                             data-astro-cid-j7pv25f6="true"
                             loading="lazy"
@@ -89,11 +89,35 @@
                 <h2 data-astro-cid-j7pv25f6>Palvelumme</h2>
                 <div class="grid" data-astro-cid-j7pv25f6>
                     <div class="card" data-astro-cid-j7pv25f6>
-                        <h3 data-astro-cid-j7pv25f6>Säännöllinen porrassiivous</h3>
+                        <div class="heading-with-icon" data-astro-cid-j7pv25f6>
+                            <img
+                                src="/lerioc/dist/saannollinenikoni.CZIg6YmX_Z2naJdR.webp"
+                                alt="Professional staircase cleaning"
+                                data-astro-cid-j7pv25f6="true"
+                                loading="lazy"
+                                decoding="async"
+                                fetchpriority="auto"
+                                width="32"
+                                height="32"
+                            />
+                            <h3 data-astro-cid-j7pv25f6>Säännöllinen porrassiivous</h3>
+                        </div>
                         <p data-astro-cid-j7pv25f6>Viikoittainen tai kuukausittainen siivous, joka pitää kohteesi puhtaana ja viihtyisänä ympäri vuoden.</p>
                     </div>
                     <div class="card" data-astro-cid-j7pv25f6>
-                        <h3 data-astro-cid-j7pv25f6>Kertaluonteinen perusteellinen pesu</h3>
+                        <div class="heading-with-icon" data-astro-cid-j7pv25f6>
+                            <img
+                                src="/lerioc/dist/kertaluonteinenikoni.CIFO_A1z_d73nK.webp"
+                                alt="Professional staircase cleaning"
+                                data-astro-cid-j7pv25f6="true"
+                                loading="lazy"
+                                decoding="async"
+                                fetchpriority="auto"
+                                width="32"
+                                height="32"
+                            />
+                            <h3 data-astro-cid-j7pv25f6>Kertaluonteinen perusteellinen pesu</h3>
+                        </div>
                         <p data-astro-cid-j7pv25f6>Koneellinen tai käsin suoritettu pesu. Portaiden, tasanteiden tehokas puhdistaminen ja pinnoitteiden uusiminen.</p>
                     </div>
                 </div>
@@ -130,23 +154,30 @@
             </div>
             <script type="module">
                 const e = document.getElementById("contactModal"),
-                    n = document.querySelectorAll(".open-contact"),
-                    o = document.querySelector(".modal-close");
-                n.forEach((t) => {
-                    t.addEventListener("click", () => {
-                        e && (e.classList.add("active"), e.setAttribute("aria-hidden", "false"));
-                    });
-                });
-                function c() {
-                    e && (e.classList.remove("active"), (document.body.style.overflow = ""));
+                    c = document.querySelectorAll(".open-contact"),
+                    d = document.querySelector(".modal-close");
+                let o = 0;
+                function i() {
+                    ((o = window.pageYOffset),
+                        e &&
+                            (e.classList.add("active"),
+                            e.setAttribute("aria-hidden", "false"),
+                            (document.body.style.position = "fixed"),
+                            (document.body.style.top = `-${o}px`),
+                            (document.body.style.left = "0"),
+                            (document.body.style.right = "0")));
                 }
-                o && o.addEventListener("click", c);
+                function n() {
+                    e && (e.classList.remove("active"), e.setAttribute("aria-hidden", "true"), (document.body.style.position = ""), (document.body.style.top = ""), window.scrollTo(0, o));
+                }
+                c.forEach((t) => t.addEventListener("click", i));
+                d && d.addEventListener("click", n);
                 e &&
                     e.addEventListener("click", (t) => {
-                        t.target === e && c();
+                        t.target === e && n();
                     });
                 document.addEventListener("keydown", (t) => {
-                    t.key === "Escape" && c();
+                    t.key === "Escape" && n();
                 });
             </script>
         </main>
@@ -163,6 +194,12 @@
                         <li data-astro-cid-k2f5zb5c><a href="mailto:info@lerioc.fi" data-astro-cid-k2f5zb5c>info@lerioc.fi</a></li>
                     </ul>
                 </div>
+                <!--div class="footer-section">
+            <h3>Referenssit</h3>
+            <a href="#"><Image src={x} height="32" alt="X" /></a>
+            <a href="#"><Image src={insta} height="32" alt="Instagram" /></a>
+            <a href="#"><Image src={facebook} height="32" alt="Facebook" /></a>
+        </div-->
             </div>
             <div class="footer-bottom" data-astro-cid-k2f5zb5c><p data-astro-cid-k2f5zb5c>&copy; 2026 Lerioc Tmi.</p></div>
         </footer>
